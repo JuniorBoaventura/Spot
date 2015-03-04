@@ -10,15 +10,29 @@
 
 
 	<nav id="scrollsections-navigation" class="wrap-menu">
-		<ul>
-			<li><a href="#section1">Section1</a></li>
-			<li><a href="#section2">Section2</a></li>
-			<li><a href="#section3">Section3</a></li>
-		</ul>
+		<div class="menu">
+			<div class="logo"></div>
+			<ul>
+				<li><a href="#section1">Section1</a></li>
+				<li><a href="#section2">Section2</a></li>
+				<li><a href="#section3">Section3</a></li>
+				<li><a href="#section4">Section4</a></li>
+				<li><a href="#section5">Section5</a></li>
+				<li><a href="#section6">Section6</a></li>
+			</ul>
+		</div>
 	</nav>
 	<table>
 			<tr>
-				<td><div class="iphone"></div></td>
+				<td><div class="iphone">
+					<div class="screen">
+						<video  src="movies/test.mov" controls="controls" autoplay loop>
+
+
+						  Ici l'alternative à la vidéo : un lien de téléchargement, un message, etc.
+						</video>
+					</div>
+				</div></td>
 			</tr>
 	</table>
 	<section id="section1" class="scrollsections" >
@@ -44,7 +58,7 @@
 		<div class="background" style=""></div>
 		<table><tr><td>
 			<div class="wrap-content">
-				<h2>Accéder à vos vidéo</h2>
+				<h2>Accéder à vos vidéos</h2>
 			</div>
 		</td></tr></table>
 	</section>
