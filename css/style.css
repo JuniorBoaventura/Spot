@@ -23,19 +23,24 @@ section table{
      height: 100%;
      position: relative;
      text-align: center;
+}
 
+.video-scroll{
+	transform:translateY(0);
+	transition:transform 1s ease;
 }
 
 h2{
 	font-weight: 100;
 	font-size: 35px;
 	margin: 0;
+	color: #FFF;
 }
 video{
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	height:
+	float: left;
 }
 .background{
 	width: 100%;
@@ -65,6 +70,10 @@ video{
 	color: #444444;
 	font-size: 16px;
 	text-decoration: none;
+}
+
+.menu .active-scrollsection{
+	color: #4587F0;
 }
 
 .wrap-menu{
@@ -127,13 +136,24 @@ video{
 	display: inline-block;
 	text-align: justify;
 }
-
+.left{
+	width: 370px;
+	float: left;
+	/*background-color:#FFF;*/
+}
+.right {
+	width: 370px;
+	float: right;
+	/*background-color:#FFF;*/
+}
 .screen{
 	width: 197px;
-	height: 347px;
+	height: 350px;
 	background-color: red;
 	border-radius: 2px;
 	margin-left: 30px;
 	margin-top: 50px;
 	overflow: hidden;
+	position: absolute;
 }
+
