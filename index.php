@@ -8,13 +8,32 @@
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<script src="js/vendor/jquery-1.7.2.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
-	<script >
+	<script src="js/plugins.js"></script>
+	<script src="js/jquery.scrollSections.js"></script>
+	<script>
+
+		$(function() {
+			var num = 0;
+			$('.scrollsections').scrollSections({
+				createNavigation: false,
+    			navigation: true
+			});
+		});
 
 		$(window).scroll(function(){
 			var section = $(".menu .active-scrollsection").attr( "href" );
 
 			var num = section.substr(section.length - 1);
-			var position = [0,-350,-700,-1050,-1400,-1750];
+			var position = [0,-350,-700,-1050,-1400];
+
+			if(num>0){
+				$('.iphone').css({"transform":"translateY(0)"});
+			}
+
+			if(num<1){
+				$('.iphone').css({"transform":"translateY(-200%)"});
+			}
+
 			$(".slider").css({
 				"transform" : "translateY("+position[num]+"px)",
 				"-webkit-transform": "translateY("+position[num]+"px)",
@@ -30,6 +49,7 @@
 			$("#video" + num).get(0).currentTime = 0;
 
 			$("#video" + num).get(0).play();
+
 			console.log(section);
 
 			console.log(position[num]);
@@ -42,12 +62,12 @@
 		<div class="menu">
 			<div class="logo"></div>
 			<ul>
-				<li><a href="#section0">Section0</a></li>
-				<li><a href="#section1">Section1</a></li>
-				<li><a href="#section2">Section2</a></li>
-				<li><a href="#section3">Section3</a></li>
-				<li><a href="#section4">Section4</a></li>
-				<li><a href="#section5">Section5</a></li>
+				<li><a href="#section0">Home</a></li>
+				<li><a href="#section1">Vidéo</a></li>
+				<li><a href="#section2">Partage</a></li>
+				<li><a href="#section3">Premium</a></li>
+				<li><a href="#section4">App</a></li>
+				<li><a href="" class="login">Login</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -58,12 +78,12 @@
 					<div class="iphone">
 					<div class="screen">
 						<div class="slider">
-							<video id="video0" class="video-iphone" autoplay loop muted>
-								<source src="movies/animation1.mp4" type="video/mp4" />
+							<video id="video0" class="video-iphone" autoplay preload loop muted>
+								<source src="movies/test.mov"/>
 								La vidéo ne peut être affiché
 							</video>
-							<video id="video1" class="video-iphone" pause preload loop muted>
-								<source src="movies/test.mov"/>
+							<video id="video1" class="video-iphone"  loop muted>
+								<source src="movies/animation1.mp4" type="video/mp4" />
 								La vidéo ne peut être affiché
 							</video>
 							<video id="video2" class="video-iphone" pause preload loop muted>
@@ -99,7 +119,7 @@
 					</p>
 				</div>
 				<div class="right bounceInRight animated">
-
+					<img src="img/iphone6-white2.png" height="200" alt="">
 				</div>
 
 
@@ -107,26 +127,19 @@
 		</td></tr></table>
 	</section>
 
-	<section id="section1" class="scrollsections">
-		<div class="background" style=""></div>
-		<table><tr><td>
-				<div class="wrap-content">
-					<h2>Trouver un spot</h2>
-				</div>
-		</td></tr></table>
-
-	</section>
-
-	<section id="section2" class="scrollsections" >
+	<section id="section1" class="scrollsections" >
 		<div class="background" style=""></div>
 		<table><tr><td>
 			<div class="wrap-content">
-				<h2>Accéder à vos vidéos</h2>
+				<div class="right">
+					<h2>Visionne tes vidéos</h2>
+				</div>
+
 			</div>
 		</td></tr></table>
 	</section>
 
-	<section id="section3" class="scrollsections" >
+	<section id="section2" class="scrollsections" >
 		<div class="background" style=""></div>
 		<table><tr><td>
 			<div class="wrap-content">
@@ -135,36 +148,29 @@
 		</td></tr></table>
 	</section>
 
+	<section id="section3" class="scrollsections" >
+		<div class="background" style=""></div>
+		<table><tr><td>
+			<div class="wrap-content">
+				<div class="right">
+					<h2>Premium</h2>
+				</div>
+			</div>
+		</td></tr></table>
+	</section>
+
 	<section id="section4" class="scrollsections" >
 		<div class="background" style=""></div>
 		<table><tr><td>
 			<div class="wrap-content">
-				<h2>Premium</h2>
-			</div>
-		</td></tr></table>
-	</section>
+			<div class="left"><h2>Télécharger</h2></div>
 
-	<section id="section5" class="scrollsections" >
-		<div class="background" style=""></div>
-		<table><tr><td>
-			<div class="wrap-content">
-				<h2>Application</h2>
+
 			</div>
 		</td></tr></table>
 	</section>
 
 
-	<script src="js/plugins.js"></script>
-	<script src="js/jquery.scrollSections.js"></script>
-	<script>
 
-		$(function() {
-			$('.scrollsections').scrollSections({
-				createNavigation: false,
-    			navigation: true
-			});
-		});
-
-	</script>
 </body>
 </html>
