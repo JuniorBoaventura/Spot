@@ -14,6 +14,13 @@
 			var num = section.substr(section.length - 1);
 			var position = [0,-350,-700,-1050,-1400,-1750];
 			$(".slider").css("transform", "translateY("+position[num]+"px)");
+
+			$("video").each(function(){
+    			$(this).get(0).pause();
+			});
+
+			$("#video" + num).get(0).currentTime = 0;
+			$("#video" + num).get(0).play();
 			console.log(section);
 
 			console.log(position[num]);
@@ -43,27 +50,27 @@
 					<div class="iphone">
 					<div class="screen">
 						<div class="slider">
-							<video id="video0" autoplay loop muted>
+							<video id="video0" class="video-iphone" autoplay loop muted>
 								<source src="movies/test.mov" type="video/mp4" />
 								La vidéo ne peut être affiché
 							</video>
-							<video id="video1" autoplay loop muted>
+							<video id="video1" class="video-iphone" autoplay loop muted>
 								<source src="movies/test.mov" type="video/mp4" />
 								La vidéo ne peut être affiché
 							</video>
-							<video id="video2" autoplay loop muted>
+							<video id="video2" class="video-iphone" autoplay loop muted>
 								<source src="movies/test.mov" type="video/mp4" />
 								La vidéo ne peut être affiché
 							</video>
-							<video id="video3" autoplay loop muted>
+							<video id="video3" class="video-iphone" autoplay loop muted>
 								<source src="movies/test.mov" type="video/mp4" />
 								La vidéo ne peut être affiché
 							</video>
-							<video id="video4" autoplay loop muted>
+							<video id="video4" class="video-iphone" autoplay loop muted>
 								<source src="movies/test.mov" type="video/mp4" />
 								La vidéo ne peut être affiché
 							</video>
-							<video id="video5" autoplay loop muted>
+							<video id="video5" class="video-iphone" autoplay loop muted>
 								<source src="movies/test.mov" type="video/mp4" />
 								La vidéo ne peut être affiché
 							</video>
@@ -79,11 +86,14 @@
 			<div class="wrap-content">
 				<div class="left">
 					<h2>Concept</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat tempor magna, semper cursus mi sollicitudin efficitur. Etiam odio lectus, sollicitudin ac tortor non, sollicitudin aliquet mauris. Cras euismod erat erat, sed molestie metus sagittis sed. Vestibulum gravida hendrerit lacus cursus semper. Morbi ut nibh bibendum, accumsan felis vitae, ultrices leo. Donec quis purus sodales, congue arcu vitae, suscipit lacus. Fusce blandit erat diam, vitae convallis massa volutpat hendrerit. Duis sed sagittis justo, vitae mollis velit. Mauris in dui justo. Maecenas et nibh sit amet metus auctor semper sed a eros. Integer mollis orci eu finibus venenatis.</p>
+					<p>
+						Visionnez vos exploits directement sur votre iphone grâce à nos pistes balisées.
+					</p>
 				</div>
 				<div class="right">
 					<h2>Concept</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat tempor magna, semper cursus mi sollicitudin efficitur. Etiam odio lectus, sollicitudin ac tortor non, sollicitudin aliquet mauris. Cras euismod erat erat, sed molestie metus sagittis sed. Vestibulum gravida hendrerit lacus cursus semper. Morbi ut nibh bibendum, accumsan felis vitae, ultrices leo. Donec quis purus sodales, congue arcu vitae, suscipit lacus. Fusce blandit erat diam, vitae convallis massa volutpat hendrerit. Duis sed sagittis justo, vitae mollis velit. Mauris in dui justo. Maecenas et nibh sit amet metus auctor semper sed a eros. Integer mollis orci eu finibus venenatis.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat tempor magna, semper cursus mi sollicitudin efficitur. Etiam odio lectus, sollicitudin ac tortor non, sollicitudin aliquet mauris. Cras euismod erat erat, sed molestie metus sagittis sed. Vestibulum gravida hendrerit lacus cursus semper.</p>
+					<p>suscipit lacus. Fusce blandit erat diam, vitae convallis massa volutpat hendrerit. Duis sed sagittis justo, vitae mollis velit. Mauris in dui justo. Maecenas et nibh sit amet metus auctor semper sed a eros. Integer mollis orci eu finibus venenatis.</p>
 				</div>
 
 
