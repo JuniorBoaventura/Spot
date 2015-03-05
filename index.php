@@ -7,11 +7,15 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/vendor/jquery-1.7.2.min.js"></script>
 	<script >
+
 		$(window).scroll(function(){
-			var section = $(".menu .active-scrollsection").text();
+			var section = $(".menu .active-scrollsection").attr( "href" );
+
 			var num = section.substr(section.length - 1);
 			var position = [0,-350,-700,-1050,-1400,-1750];
-			$(".video-scroll").css("transform", "translateY("+position[num]+"px)");
+			$(".slider").css("transform", "translateY("+position[num]+"px)");
+			console.log(section);
+
 			console.log(position[num]);
 		});
 	</script>
@@ -23,7 +27,7 @@
 		<div class="menu">
 			<div class="logo"></div>
 			<ul>
-				<li><a href="#section0">Home</a></li>
+				<li><a href="#section0">Section0</a></li>
 				<li><a href="#section1">Section1</a></li>
 				<li><a href="#section2">Section2</a></li>
 				<li><a href="#section3">Section3</a></li>
@@ -38,24 +42,32 @@
 				<td>
 					<div class="iphone">
 					<div class="screen">
-						<video id="video0" class="video-scroll" src="movies/test.mov" autoplay loop muted>
-							La vidéo ne peut être affiché
-						</video>
-						<video id="video1" class="video-scroll" src="movies/test.mov" autoplay loop muted>
-							La vidéo ne peut être affiché
-						</video>
-						<video id="video2" class="video-scroll" src="movies/test.mov" autoplay loop muted>
-							La vidéo ne peut être affiché
-						</video>
-						<video id="video3" class="video-scroll" src="movies/test.mov" autoplay loop muted>
-							La vidéo ne peut être affiché
-						</video>
-						<video id="video4" class="video-scroll" src="movies/test.mov" autoplay loop muted>
-							La vidéo ne peut être affiché
-						</video>
-						<video id="video5" class="video-scroll" src="movies/test.mov" autoplay loop muted>
-							La vidéo ne peut être affiché
-						</video>
+						<div class="slider">
+							<video id="video0" autoplay loop muted>
+								<source src="movies/test.mov" type="video/mp4" />
+								La vidéo ne peut être affiché
+							</video>
+							<video id="video1" autoplay loop muted>
+								<source src="movies/test.mov" type="video/mp4" />
+								La vidéo ne peut être affiché
+							</video>
+							<video id="video2" autoplay loop muted>
+								<source src="movies/test.mov" type="video/mp4" />
+								La vidéo ne peut être affiché
+							</video>
+							<video id="video3" autoplay loop muted>
+								<source src="movies/test.mov" type="video/mp4" />
+								La vidéo ne peut être affiché
+							</video>
+							<video id="video4" autoplay loop muted>
+								<source src="movies/test.mov" type="video/mp4" />
+								La vidéo ne peut être affiché
+							</video>
+							<video id="video5" autoplay loop muted>
+								<source src="movies/test.mov" type="video/mp4" />
+								La vidéo ne peut être affiché
+							</video>
+						</div>
 					</div>
 					</div>
 			</td>

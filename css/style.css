@@ -25,11 +25,6 @@ section table{
      text-align: center;
 }
 
-.video-scroll{
-	transform:translateY(0);
-	transition:transform 1s ease;
-}
-
 h2{
 	font-weight: 100;
 	font-size: 35px;
@@ -149,11 +144,18 @@ video{
 .screen{
 	width: 197px;
 	height: 350px;
-	background-color: red;
+	/*background-color: red;*/
 	border-radius: 2px;
 	margin-left: 30px;
 	margin-top: 50px;
 	overflow: hidden;
 	position: absolute;
+}
+
+.slider{
+	width: 197px;
+	background-color: red;
+	transform:translateY(0);
+	transition:transform 1s ease;
 }
 
