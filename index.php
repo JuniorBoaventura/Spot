@@ -5,6 +5,7 @@
 	<title>Spot</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<script src="js/vendor/jquery-1.7.2.min.js"></script>
 	<script >
 
@@ -13,7 +14,13 @@
 
 			var num = section.substr(section.length - 1);
 			var position = [0,-350,-700,-1050,-1400,-1750];
-			$(".slider").css("transform", "translateY("+position[num]+"px)");
+			$(".slider").css({
+				"transform" : "translateY("+position[num]+"px)",
+				"-webkit-transform": "translateY("+position[num]+"px)",
+	    		"-ms-transform":"translateY("+position[num]+"px)",
+	        	"transform":"translateY("+position[num]+"px)",
+				"-webkit-transition":"-webkit-transform 1s ease;"
+			});
 
 			$("video").each(function(){
     			$(this).get(0).pause();
@@ -28,7 +35,6 @@
 	</script>
 </head>
 <body>
-
 
 	<nav id="scrollsections-navigation" class="wrap-menu">
 		<div class="menu">
@@ -51,7 +57,7 @@
 					<div class="screen">
 						<div class="slider">
 							<video id="video0" class="video-iphone" autoplay loop muted>
-								<source src="movies/test.mov" type="video/mp4" />
+								<source src="movies/animation1.mp4" type="video/mp4" />
 								La vidéo ne peut être affiché
 							</video>
 							<video id="video1" class="video-iphone" autoplay loop muted>
@@ -90,7 +96,7 @@
 						Visionnez vos exploits directement sur votre iphone grâce à nos pistes balisées.
 					</p>
 				</div>
-				<div class="right">
+				<div class="right bounceInRight animated">
 					<h2>Concept</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat tempor magna, semper cursus mi sollicitudin efficitur. Etiam odio lectus, sollicitudin ac tortor non, sollicitudin aliquet mauris. Cras euismod erat erat, sed molestie metus sagittis sed. Vestibulum gravida hendrerit lacus cursus semper.</p>
 					<p>suscipit lacus. Fusce blandit erat diam, vitae convallis massa volutpat hendrerit. Duis sed sagittis justo, vitae mollis velit. Mauris in dui justo. Maecenas et nibh sit amet metus auctor semper sed a eros. Integer mollis orci eu finibus venenatis.</p>

@@ -43,7 +43,6 @@ video{
 	height: 60%;
 	background-color: #4587F0;
 	position: absolute;
-
 }
 
 .dispo1{
@@ -158,7 +157,9 @@ video{
 .slider{
 	width: 197px;
 	background-color: red;
-	transform:translateY(0);
-	transition:transform 1s ease;
+	-webkit-transform:translateY(0);
+	    -ms-transform:translateY(0);
+	        transform:translateY(0);
+	-webkit-transition:-webkit-transform 1s ease;
+	        transition:transform 1s ease;
 }
-
