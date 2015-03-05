@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<script src="js/vendor/jquery-1.7.2.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
 	<script >
 
 		$(window).scroll(function(){
@@ -27,6 +28,7 @@
 			});
 
 			$("#video" + num).get(0).currentTime = 0;
+
 			$("#video" + num).get(0).play();
 			console.log(section);
 
@@ -60,24 +62,24 @@
 								<source src="movies/animation1.mp4" type="video/mp4" />
 								La vidéo ne peut être affiché
 							</video>
-							<video id="video1" class="video-iphone" autoplay loop muted>
-								<source src="movies/test.mov" type="video/mp4" />
+							<video id="video1" class="video-iphone" pause preload loop muted>
+								<source src="movies/test.mov"/>
 								La vidéo ne peut être affiché
 							</video>
-							<video id="video2" class="video-iphone" autoplay loop muted>
-								<source src="movies/test.mov" type="video/mp4" />
+							<video id="video2" class="video-iphone" pause preload loop muted>
+								<source src="movies/test.mov"/>
 								La vidéo ne peut être affiché
 							</video>
-							<video id="video3" class="video-iphone" autoplay loop muted>
-								<source src="movies/test.mov" type="video/mp4" />
+							<video id="video3" class="video-iphone" pause preload loop muted>
+								<source src="movies/test.mov"/>
 								La vidéo ne peut être affiché
 							</video>
-							<video id="video4" class="video-iphone" autoplay loop muted>
-								<source src="movies/test.mov" type="video/mp4" />
+							<video id="video4" class="video-iphone" pause preload loop muted>
+								<source src="movies/test.mov"/>
 								La vidéo ne peut être affiché
 							</video>
-							<video id="video5" class="video-iphone" autoplay loop muted>
-								<source src="movies/test.mov" type="video/mp4" />
+							<video id="video5" class="video-iphone" pause preload loop muted>
+								<source src="movies/animation1.mp4" type="video/mp4" />
 								La vidéo ne peut être affiché
 							</video>
 						</div>
@@ -97,9 +99,7 @@
 					</p>
 				</div>
 				<div class="right bounceInRight animated">
-					<h2>Concept</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat tempor magna, semper cursus mi sollicitudin efficitur. Etiam odio lectus, sollicitudin ac tortor non, sollicitudin aliquet mauris. Cras euismod erat erat, sed molestie metus sagittis sed. Vestibulum gravida hendrerit lacus cursus semper.</p>
-					<p>suscipit lacus. Fusce blandit erat diam, vitae convallis massa volutpat hendrerit. Duis sed sagittis justo, vitae mollis velit. Mauris in dui justo. Maecenas et nibh sit amet metus auctor semper sed a eros. Integer mollis orci eu finibus venenatis.</p>
+
 				</div>
 
 
@@ -158,14 +158,13 @@
 	<script src="js/jquery.scrollSections.js"></script>
 	<script>
 
-
 		$(function() {
 			$('.scrollsections').scrollSections({
 				createNavigation: false,
     			navigation: true
 			});
-
 		});
+
 	</script>
 </body>
 </html>
