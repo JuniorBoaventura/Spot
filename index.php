@@ -24,14 +24,26 @@
 			var section = $(".menu .active-scrollsection").attr( "href" );
 
 			var num = section.substr(section.length - 1);
-			var position = [0,-350,-700,-1050,-1400];
+			var position = [0,-350,-700,-1050,-1400,-1750,-2100];
 
 			if(num>0){
-				$('.iphone').css({"transform":"translateY(0)"});
+				$('.iphone').css({
+					"transform":"translateY(0)",
+					"-webkit-transform": "translateY(0)",
+		    		"-ms-transform":"translateY(0)",
+		        	"transform":"translateY(0)",
+					"-webkit-transition":"-webkit-transform 1s ease;"
+				});
 			}
 
 			if(num<1){
-				$('.iphone').css({"transform":"translateY(-200%)"});
+				$('.iphone').css({
+					"transform":"translateY(-200%)",
+					"-webkit-transform": "translateY(-200%)",
+		    		"-ms-transform":"translateY(-200%)",
+		        	"transform":"translateY(-200%)",
+					"-webkit-transition":"-webkit-transform 1s ease;"
+				});
 			}
 
 			$(".slider").css({
@@ -63,10 +75,12 @@
 			<div class="logo"></div>
 			<ul>
 				<li><a href="#section0">Home</a></li>
-				<li><a href="#section1">Vidéo</a></li>
-				<li><a href="#section2">Partage</a></li>
-				<li><a href="#section3">Premium</a></li>
-				<li><a href="#section4">App</a></li>
+				<li><a href="#section1">App</a></li>
+				<li><a href="#section2">Vidéo</a></li>
+				<li><a href="#section3">Partage</a></li>
+				<li><a href="#section4">Premium</a></li>
+				<li><a href="#section5">Témoignages</a></li>
+				<li><a href="#section6">Télécharger</a></li>
 				<li><a href="" class="login">Login</a></li>
 			</ul>
 		</div>
@@ -78,30 +92,33 @@
 					<div class="iphone">
 					<div class="screen">
 						<div class="slider">
-							<video id="video0" class="video-iphone" autoplay preload loop muted>
-								<source src="movies/test.mov"/>
-								La vidéo ne peut être affiché
-							</video>
-							<video id="video1" class="video-iphone"  loop muted>
+
+							<img id="video0" src="pictures/white.jpg">
+
+							<video id="video1" class="video-iphone" pause loop muted>
 								<source src="movies/animation1.mp4" type="video/mp4" />
-								La vidéo ne peut être affiché
+								La vidéo ne peut être affichée
 							</video>
-							<video id="video2" class="video-iphone" pause preload loop muted>
-								<source src="movies/test.mov"/>
-								La vidéo ne peut être affiché
-							</video>
+
+							<img id="video2" src="pictures/white.jpg"> <!-- Video -->
+
 							<video id="video3" class="video-iphone" pause preload loop muted>
 								<source src="movies/test.mov"/>
-								La vidéo ne peut être affiché
+								La vidéo ne peut être affichée
 							</video>
+
 							<video id="video4" class="video-iphone" pause preload loop muted>
-								<source src="movies/test.mov"/>
-								La vidéo ne peut être affiché
+								<source src="movies/animation2.mp4" type="video/mp4"/>
+								La vidéo ne peut être affichée
 							</video>
+
 							<video id="video5" class="video-iphone" pause preload loop muted>
-								<source src="movies/animation1.mp4" type="video/mp4" />
-								La vidéo ne peut être affiché
+								<source src="movies/animation3.mp4" type="video/mp4"/>
+								La vidéo ne peut être affichée
 							</video>
+
+							<img id="video6" src="pictures/app-store.jpg">
+
 						</div>
 					</div>
 					</div>
@@ -109,20 +126,20 @@
 		</tr>
 	</table>
 	<section id="section0" class="scrollsections" >
-		<div class="background dispo1" style=""></div>
+		<div class="background">
+			<div class="produit bounceInLeft animated"></div>
+		</div>
 		<table><tr><td>
 			<div class="wrap-content">
 				<div class="left">
 					<h2>Concept</h2>
 					<p>
-						Visionnez vos exploits directement sur votre iphone grâce à nos pistes balisées.
+						<b>Urban riders !</b> Avez-vous déjà imaginé vous voir réaliser vos exploits ? Et que la caméra vous suive ? Positionnez vos balises iBeacon©. Fixez votre caméra. Ready ? Let’s Spot ! Ridez, puis visionnez vos exploits directement sur votre smartphone.
 					</p>
 				</div>
-				<div class="right bounceInRight animated">
-					<img src="img/iphone6-white2.png" height="200" alt="">
+				<div class="right">
+
 				</div>
-
-
 			</div>
 		</td></tr></table>
 	</section>
@@ -131,10 +148,13 @@
 		<div class="background" style=""></div>
 		<table><tr><td>
 			<div class="wrap-content">
-				<div class="right">
-					<h2>Visionne tes vidéos</h2>
+				<div class="left" style="text-align:center; margin-top:100px;">
+					<img src="img/spot-logo-app.png" height="90" alt="" style="diplay:inline-block;">
 				</div>
-
+				<div class="right">
+					<h2>Application</h2>
+					<p><b>Spot©</b> est votre interface pour accéder à vos vidéos. Si vous avez une caméra sport, après synchronisation, votre caméra pointera en permanence sur votre smartphone. Sinon, filmez avec votre smartphone, et un bracelet connecté fera office de cible.<p>
+			</div>
 			</div>
 		</td></tr></table>
 	</section>
@@ -143,7 +163,12 @@
 		<div class="background" style=""></div>
 		<table><tr><td>
 			<div class="wrap-content">
-				<h2>Partage</h2>
+				<div class="left">
+					<h2>Vidéo</h2>
+					<p>
+						<b>Visionnez</b> vos Spots pendant votre session, ou après. Libre à vous d’améliorer vos performances ou de choisir un meilleur angle de vue !
+					</p>
+				</div>
 			</div>
 		</td></tr></table>
 	</section>
@@ -153,7 +178,10 @@
 		<table><tr><td>
 			<div class="wrap-content">
 				<div class="right">
-					<h2>Premium</h2>
+					<h2>Partage</h2>
+					<p>
+						<b>Partagez</b> vos prouesses avec vos amis. Par Facebook, MMS ou email, envoyez en un clic vos Spot favoris.
+					</p>
 				</div>
 			</div>
 		</td></tr></table>
@@ -163,14 +191,44 @@
 		<div class="background" style=""></div>
 		<table><tr><td>
 			<div class="wrap-content">
-			<div class="left"><h2>Télécharger</h2></div>
-
-
+				<div class="left">
+					<h2>Premium</h2>
+					<p>
+						<b>En manque</b> d’espace de stockage ? Souscrivez à notre abonnement Premium. Pour 5€ par mois, un stockage de 100 Go sur notre Cloud.
+					</p>
+				</div>
 			</div>
 		</td></tr></table>
 	</section>
 
+	<section id="section5" class="scrollsections" >
+		<div class="background" style=""></div>
+		<table><tr><td>
+			<div class="wrap-content">
+				<div class="right">
+					<h2>Témoignages</h2>
+					<p>
+						<b>Des avis</b> déjà satisfaits des utilisateurs de notre version bêta !
+					</p>
+				</div>
+			</div>
+		</td></tr></table>
+	</section>
 
+	<section id="section6" class="scrollsections" >
+		<div class="background" style=""></div>
+		<table><tr><td>
+			<div class="wrap-content">
+				<div class="left">
+					<h2>Télécharger</h2>
+					<p><b>Notre application</b> est disponible sur l’AppStore et Google Play.</p>
+				</div>
+				<div class="right">
+					<img src="img/appstore-google-play.png" height="110" style="margin-top:100px;">
+				</div>
+			</div>
+		</td></tr></table>
+	</section>
 
 </body>
 </html>

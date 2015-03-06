@@ -1,6 +1,4 @@
 body{
-	/*background-color: rgba(236,236,236,0.8);*/
-	font-family: "Roboto";
 	font-family: "Helvetica Neue";
 }
 
@@ -30,7 +28,9 @@ h2{
 	font-weight: 100;
 	font-size: 35px;
 	margin: 0;
+	margin-bottom: 30px;
 	color: #FFF;
+	letter-spacing: 2px;
 }
 
 video{
@@ -41,35 +41,32 @@ video{
 }
 .background{
 	width: 100%;
-	height: 60%;
+	height: 65%;
 	background-color: #3F51B5;
 	position: absolute;
-}
-
-.dispo1{
-	/*background:url('../pictures/ski3.jpg');*/
-	background-position:center bottom;
-	background-position:no-repeat;
-	background-size: cover;
 }
 
 .menu{
 	width: 100%;
 	max-width: 1000px;
 	height: 50px;
-	/*background-color: red;*/
 	margin: 10px auto;
-
 }
 
 .menu a{
 	color: #444444;
 	font-size: 16px;
 	text-decoration: none;
+	transition:0.5s ease;
+}
+
+.menu a:hover{
+	color: #999;
 }
 
 .menu .active-scrollsection{
 	color: #3F51B5;
+	transition:0.5s ease;
 }
 
 .wrap-menu{
@@ -83,7 +80,6 @@ video{
 .wrap-menu ul{
 	padding: 0;
 	margin: 0;
-	/*background-color: blue;*/
 	float: right;
 	margin-top: 15px;
 }
@@ -119,8 +115,11 @@ video{
 	width: 260px;
 	background: url("../img/iphone6-white.png");
 	background-size:260px;
-	transform:translateY(-200%);
-	transition:transform 1s ease;
+	-webkit-transform:translateY(-200%);
+	    -ms-transform:translateY(-200%);
+	        transform:translateY(-200%);
+	-webkit-transition:-webkit-transform 1s ease;
+	        transition:transform 1s ease;
 	display: inline-block;
 }
 
@@ -128,29 +127,25 @@ video{
 	width: 100%;
 	max-width: 1000px;
 	height: 385px;
-	/*background-color: #FFF;*/
-	/*opacity: 0.8;*/
-	/*border:dashed 1px rgba(255,255,255,0.6);*/
 	display: inline-block;
 	text-align: justify;
 	line-height: 25px;
 	color: #FFF;
 }
 .left{
-	width: 370px;
+	width: 330px;
 	float: left;
 	font-size: 14px;
-	/*background-color:#FFF;*/
 }
 .right {
-	width: 370px;
+	width: 330px;
 	float: right;
-	/*background-color:#FFF;*/
+	font-size: 14px;
 }
+
 .screen{
 	width: 197px;
 	height: 350px;
-	/*background-color: red;*/
 	border-radius: 2px;
 	margin-left: 30px;
 	margin-top: 50px;
@@ -173,4 +168,19 @@ video{
 	        transform:translateY(0);
 	-webkit-transition:-webkit-transform 1s ease;
 	        transition:transform 1s ease;
+}
+
+.slider img{
+	float: left;
+	height: 350px;
+	width: 197px;
+}
+
+.produit{
+	width: 50%;
+	height: 100%;
+	background: url("../pictures/produit.jpg") bottom center;
+	background-size: cover;
+	float: right;
+
 }
