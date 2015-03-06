@@ -164,7 +164,7 @@
 				</div>
 				<div class="right">
 					<h2>Application</h2>
-					<p><b>Spot©</b> est votre interface pour accéder à vos vidéos. Si vous avez une caméra sport, après synchronisation, votre caméra pointera en permanence sur votre smartphone. Sinon, filmez avec votre smartphone, et un bracelet connecté fera office de cible.<p>
+					<p><b>Spot©</b> est votre interface pour accéder à vos vidéos. Si vous avez une caméra de sport, après synchronisation, votre caméra pointera en permanence sur votre smartphone. Sinon, filmez avec votre smartphone, et un bracelet connecté fera office de cible.<p>
 			</div>
 			</div>
 		</td></tr></table>
@@ -233,7 +233,7 @@
 				<div class="left">
 					<h2>Télécharger</h2>
 					<p><b>Notre application</b> est disponible sur l’AppStore et Google Play.</p>
-					<a href="#" class="order">Commander</a>
+					<a href="#" class="order">Commander <b>Spot</B></a>
 				</div>
 				<div class="right">
 					<img src="img/appstore-google-play.png" height="110" style="margin-top:100px;" alt="logo store">
