@@ -1,5 +1,5 @@
 body{
-	font-family: "Helvetica Neue";
+	font-family: "Roboto";
 }
 
 section{
@@ -36,6 +36,7 @@ h2{
 video{
 	margin: 0;
 	padding: 0;
+	height: 100%;
 	width: 100%;
 	float: left;
 }
@@ -182,5 +183,21 @@ video{
 	background: url("../pictures/produit.jpg") bottom center;
 	background-size: cover;
 	float: right;
+}
 
+.order{
+	border:solid 1px #FFF;
+	padding: 8px 15px;
+	border-radius: 3px;
+	color: #FFF !important;
+	text-decoration: none;
+	margin-top: 20px;
+	display: inline-block;
+	transition: 1s ease;
+}
+
+.order:hover{
+	background-color: rgba(255,255,255,0.6);
+	color:#3F51B5 !important;
+	transition: 1s ease;
 }
